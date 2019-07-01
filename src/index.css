@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+.app{
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.shade{
+
+}
+
+.card{
+  min-width: 320px;
+  background: #FFF;
+  box-shadow: 0px 3px 59px rgba(0,0,0,0.20);
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.card .image{
+  flex-direction: column;
+  width: 320px;
+  height: 280px;
+  background: #A8ABB0;
+  position: relative;
+}
+
+.card .image .overlay{
+  transition-duration: 0.4s;
+}
+
+.card .image .overlay.invisible{
+  background: 'transparent'
+
+}
+
+.card .image .overlay.show{
+  background: rgba(0,0,0,0.4)
+}
+
+.card .image .overlay.invisible .top{
+  visibility: hidden;
+
+}
+
+.card .image .overlay.show .top{
+  transition: opacity 0.3s;
+}
+
+.card .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .image .overlay{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  flex-direction: column;
+}
+
+.card .image .overlay button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.card .image .name{
+  background: transparent;
+  position: relative;
+  width: 100%;
+  display: flex;
+  outline: none;
+  border: none;
+  align-self: flex-end;
+  justify-content: flex-end
+}
+
+.card .image .name::placeholder{
+  color: white;
+}
+
+.card .breed{
+  margin: 10px 0;
+  position: relative;
+}
+
+.card .breed label{
+  color: white;
+  font-size: 26px;
+}
+
+.card .breed select{
+  background: transparent;
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card .breed input:checked ~ *{
+  background: white;
+}
+
+.card .message{
+  font-size: 42px;
+  font-family: 'SignPainter', sans-serif;
+  text-align: center;
+  width: 320px;
+  border: none;
+  outline: none;
+  margin-top: 1em;
+}
+
+.card .image .top {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  width: 150px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.btn{
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 18px;
+  color: "white";
+  margin-top: 25px;
+}
+
+.btn.success{
+  background-color: "#4FAD4E";
+  
+}
+
+.tooltip{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: '5px 0px'
+}
+
+.tooltip .action{
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
+}
+
+.tooltip .action input[type="radio"]{
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tooltip .action.active button{
+  display:block;
+}
+
+.tooltip .action.active .panel{
+  display:block;
+}
+
+.tooltip .action.active + button{
+  display:none;
+}
+
+.tooltip .action.font{
+  position: relative;
+  margin: 0 auto;
+}
+
+.tooltip .action.font select{
+  background: transparent;
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.tooltip .action.font label{
+  margin-left: 10px;
+
+}
+
+.tooltip .action.colors{
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.tooltip .action.colors .color{
+  border-radius: 50px;
+  border: none;
+  display: inline-flex;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.tooltip .action.colors .color label{
+  cursor: pointer;
+  border-radius: 50px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  display: flex;
+
+}
+
+.tooltip .action.colors .color input + label{
+  border: 2px solid #FFF;
+}
+
+
+.tooltip button{
+  background: none;
+  border: none;
+}

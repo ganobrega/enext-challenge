@@ -1,0 +1,57 @@
+<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="126"
+                height="42"
+                viewBox="0 0 126 42"
+            >
+                <g transform="translate(-564 -91)">
+                    <text
+                        transform="translate(627 112)"
+                        fill="#707070"
+                        font-size="22"
+                        font-family="HelveticaNeue, Helvetica Neue"
+                        letter-spacing="0.18em"
+                    >
+                        <tspan x="-62.084" y="0">
+                            doglaroid
+                        </tspan>
+                    </text>
+                    <g transform="translate(79.516 -12)">
+                        <line
+                            x2="110.252"
+                            transform="translate(493.484 136)"
+                            fill="none"
+                            stroke="#c93a2b"
+                            stroke-width="2"
+                        />
+                        <line
+                            x2="110.252"
+                            transform="translate(493.484 138)"
+                            fill="none"
+                            stroke="#f08833"
+                            stroke-width="2"
+                        />
+                        <line
+                            x2="110.252"
+                            transform="translate(493.484 140)"
+                            fill="none"
+                            stroke="#f5b63f"
+                            stroke-width="2"
+                        />
+                        <line
+                            x2="110.252"
+                            transform="translate(493.484 142)"
+                            fill="none"
+                            stroke="#4fad4e"
+                            stroke-width="2"
+                        />
+                        <line
+                            x2="110.252"
+                            transform="translate(493.484 144)"
+                            fill="none"
+                            stroke="#44a1db"
+                            stroke-width="2"
+                        />
+                    </g>
+                </g>
+            </svg>
