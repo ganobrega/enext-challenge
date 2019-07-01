@@ -28,7 +28,16 @@ const Card = props => {
         message: styledMessage,
       },
     });
-  }, [breed, image, message, name, props.name, setData, styledMessage, styledName]);
+  }, [
+    breed,
+    image,
+    message,
+    name,
+    props.name,
+    setData,
+    styledMessage,
+    styledName,
+  ]);
 
   return (
     <div className="card">
@@ -39,7 +48,7 @@ const Card = props => {
       />
       <Input
         className="message"
-        placeholder="Type a message"
+        // placeholder="Type a message"
         value={[message, setMessage]}
         theme={[styledMessage, setStyledMessage]}
         colors={[

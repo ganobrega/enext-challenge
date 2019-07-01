@@ -55,7 +55,7 @@ const Breed = props => {
     <div className="breed">
       <label aria-label="Choose other breed" title="Choose a breed">
         {breed === ''
-          ? 'Choose other breed'
+          ? 'Click here to \n a choose breed'
           : data.find(x => x.value === breed).name}
       </label>
       <select

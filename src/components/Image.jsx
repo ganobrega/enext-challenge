@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import * as Feather from 'react-feather';
 
 import Breed from './Breed';
@@ -9,13 +9,15 @@ const Image = props => {
   const [image, setImage] = props.image;
   const [name, setName, styledName, setStyledName] = props.name;
   const [isLoaded, setLoad] = useState(false);
-  const [isFocused, setFocus] = useState(false);
   const [overlayVisible, setOverlayVisible] = useState(false);
 
   const fetchData = () => {
+    console.log(breed);
     setLoad(false);
     if (breed !== '') {
-      fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
+      fetch(
+        `https://dog.ceo/api/breed/${breed.replace('-', '/')}/images/random`
+      )
         .then(res => res.json())
         .then(res => setImage(res.message));
     } else {
@@ -53,11 +55,12 @@ const Image = props => {
         </div>
         <Input
           className="name"
-          placeholder="Name"
+          // placeholder="Name"
           value={[name, setName]}
           theme={[styledName, setStyledName]}
           colors={[
             '#FFFFFF',
+            '#000000',
             '#C93A2B',
             '#F08833',
             '#F5B63F',

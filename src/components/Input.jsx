@@ -101,7 +101,7 @@ const Input = props => {
         {...props}
         value={value}
         onChange={e => setValue(e.target.value)}
-        style={{ ...style, ...theme }}
+        style={{ ...style, fonFamily: theme.font, color: theme.color }}
       />
     </Tippy>
   );

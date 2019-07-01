@@ -122,6 +122,10 @@ body, html{
 .card .breed label{
   color: white;
   font-size: 26px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  display: flex;
 }
 
 .card .breed select{
@@ -138,8 +142,8 @@ body, html{
   opacity: 0;
 }
 
-.card .breed input:checked ~ *{
-  background: white;
+.card .card .image .overlay select:checked ~ *{
+  border: 2px solid #FFF;
 }
 
 .card .message{
@@ -177,8 +181,9 @@ body, html{
 }
 
 .btn.success{
-  background-color: "#4FAD4E";
-  
+  background-color: #4FAD4E;
+  color: white;
+  cursor: pointer;
 }
 
 .tooltip{

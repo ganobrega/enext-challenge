@@ -1,42 +1,26 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { useCookies } from 'react-cookie';
+import React, { Fragment, useState } from 'react';
 
 import Card from './components/Card';
 import Logo from './components/Logo';
 
 const App = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(['picture']);
   const [data, setData] = useState({
-    name: '',
+    name: 'Type the name',
     image: '',
     breed: '',
-    location: '',
+    message: 'Type your message',
 
     inputs: {
-      name: {},
+      name: {
+        color: '#FFF',
+      },
       location: {},
     },
   });
 
-  const [isLoaded, setLoaded] = useState(false);
-
   const save = e => {
     console.log(e.target.value);
-
-    setCookie('picture', JSON.stringify(data), { path: '/' });
   };
-
-  const load = () => {
-    // console.log(cookies.picture);
-    // setData(cookies.picture);
-    // setLoaded(true);
-  };
-
-  useEffect(() => {
-    // if (!isLoaded) {
-    setData(cookies.picture);
-    // }
-  }, [cookies.picture, load]);
 
   return (
     <Fragment>
